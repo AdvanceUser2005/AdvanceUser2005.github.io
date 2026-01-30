@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Nice to meet you? I am Daksh, I am a sophmmore student at Virginia Tech pursuing Computer Engineering.
+Nice to meet you? I am Daksh, I am a sophomore student at Virginia Tech pursuing Computer Engineering.
 
 More about Me
 ======

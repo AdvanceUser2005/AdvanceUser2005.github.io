@@ -11,7 +11,7 @@ redirect_from:
 
 Personal Information 
 
-#Reach out to me
+# Reach out to me
 You can reach out to me at:
 - mailtodaksh@vt.edu
 - 540 xxx xxxx
