@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Personal Information"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,7 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-Personal Information 
 
 # Reach out to me
 You can reach out to me at:
