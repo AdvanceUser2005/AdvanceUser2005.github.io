@@ -239,6 +239,7 @@ h2.h span{color:var(--accent);font-style:italic}
   background:var(--bg);border:2.5px solid var(--accent);
 }
 .tl-date{font-family:var(--fm);font-size:.8rem;color:var(--accent);letter-spacing:.05em;margin-bottom:7px}
+.tl-school{font-family:var(--fd);font-weight:700;font-size:1.75rem;letter-spacing:-.02em;line-height:1.1;margin-bottom:6px;color:var(--maroon,#861F41)}
 .tl-role{font-weight:700;font-size:1.2rem;letter-spacing:-.01em;margin-bottom:3px}
 .tl-org{font-size:1.02rem;color:var(--warm);font-weight:600;margin-bottom:9px}
 .tl-desc{font-size:.98rem;color:var(--muted);line-height:1.7}
@@ -478,8 +479,8 @@ footer span{color:var(--accent)}
       <div class="strip-label">Competition Robot — CRO</div>
     </div>
     <div class="strip-card reveal">
-      <img src="assets/images/team-photo.jpg" alt="VT IEEE team at a robotics competition">
-      <div class="strip-label">VT IEEE Team</div>
+      <img src="assets/images/team-photo.jpg" alt="Daksh with the Virginia Tech CRO team">
+      <div class="strip-label">Me &amp; the VT CRO Team</div>
     </div>
     <div class="strip-card reveal">
       <img src="assets/images/robot-claw.jpg" alt="Mining Mayhem object-sorting robot">
@@ -500,8 +501,8 @@ footer span{color:var(--accent)}
       </div>
       <div class="about-text">
         <p class="reveal">I'm a <strong>Computer Engineering student at Virginia Tech</strong> (Class of 2028), specializing in robotics and autonomous systems. I like building things that exist in the physical world and respond intelligently to it — the messier the integration between hardware and software, the more I enjoy it.</p>
-        <p class="reveal">Active in the <strong>Competitive Robotics Organization (CRO)</strong> and the <strong>IEEE Student Executive Committee</strong> — two communities where most of my real engineering education has happened, outside the classroom.</p>
-        <p class="reveal">Currently building <strong>Lunar ResQ</strong>: a multi-robot rescue system pairing an autonomous ground rover with an aerial drone — ROS 2 Jazzy, SLAM from depth camera + IMU fusion alone, and behavior trees coordinating both agents inside a 3-minute mission window.</p>
+        <p class="reveal">Software engineer on the <strong>Competitive Robotics Organization (CRO)</strong> team at Virginia Tech — where most of my real engineering education has happened, outside the classroom.</p>
+        <p class="reveal">Right now I'm building <strong>Mini Tesla</strong>: a regenerative electric vehicle prototype exploring propulsion, drivetrain gearing, and energy recovery from the ground up. Before it, I shipped <strong>Lunar ResQ</strong> and <strong>Mining Mayhem</strong> — two competition robots running full ROS 2 autonomy stacks.</p>
         <p class="reveal">When I'm not writing firmware, I'm running my Prusa MK4S, doing PCB work, or out shooting photos.</p>
       </div>
       <div class="reveal about-skills">
@@ -543,8 +544,9 @@ footer span{color:var(--accent)}
         <div class="reveal">
           <div class="tl-item">
             <p class="tl-date">Expected May 2028</p>
+            <p class="tl-school">Virginia Tech</p>
             <p class="tl-role">Bachelor of Computer Engineering</p>
-            <p class="tl-org">Virginia Tech · Blacksburg, VA</p>
+            <p class="tl-org">Blacksburg, VA</p>
             <p class="tl-desc">Robotics focus area within the 128-credit computer engineering program.</p>
             <div class="coursework">
               <p class="cw-label">Relevant Coursework</p>
@@ -560,15 +562,9 @@ footer span{color:var(--accent)}
         <div class="r-col-title reveal">Involvement</div>
         <div class="reveal">
           <div class="tl-item">
-            <p class="tl-date">2024 — Present</p>
-            <p class="tl-role">IEEE Student Exec Committee</p>
-            <p class="tl-org">Virginia Tech IEEE</p>
-            <p class="tl-desc">Organizing technical workshops and community events across the VT ECE department.</p>
-          </div>
-          <div class="tl-item">
             <p class="tl-date">2024 — 2026</p>
             <p class="tl-role">Software Engineer — VT CRO</p>
-            <p class="tl-org">SouthEast Con IEEE 2025 – 26</p>
+            <p class="tl-org">SoutheastCon 2025 – 26</p>
             <p class="tl-desc">Developed and directed ROS 2 motion control and planning — tuned custom PID control nodes that reduced steady-state error and overshoot. Debugged navigation issues to improve path consistency and localization accuracy across testing phases.</p>
           </div>
           <div class="tl-item">
@@ -596,11 +592,21 @@ footer span{color:var(--accent)}
     <p class="eyebrow reveal">Build Log</p>
     <h2 class="h reveal">Projects</h2>
     <div class="proj-grid">
+      <div class="proj-card reveal" data-project="mini-tesla" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="thumb placeholder">ADD PROJECT IMAGE</div>
+        <div class="proj-body">
+          <div class="proj-top"><h3 class="proj-name">Mini Tesla — Regenerative EV Prototype</h3><span class="proj-badge">ACTIVE</span></div>
+          <div class="proj-meta">Personal Project · 2026 – Present</div>
+          <p class="proj-desc">A hands-on electric vehicle prototype exploring propulsion, drivetrain gearing, regenerative braking, and power distribution.</p>
+          <div class="proj-tags"><span class="ptag">EV</span><span class="ptag">DC Motors</span><span class="ptag">Regen Braking</span><span class="ptag">Custom Gearbox</span></div>
+          <span class="proj-link">View Details →</span>
+        </div>
+      </div>
       <div class="proj-card reveal" data-project="lunar-resq" tabindex="0" role="button" aria-haspopup="dialog">
         <img class="thumb" src="assets/images/rover-duck-2.jpg" alt="Lunar ResQ ground rover">
         <div class="proj-body">
-          <div class="proj-top"><h3 class="proj-name">Lunar ResQ — Rescue Robot &amp; Drone</h3><span class="proj-badge">ACTIVE</span></div>
-          <div class="proj-meta">Sept 2025 – Present · IEEE SouthEast Con 2026</div>
+          <div class="proj-top"><h3 class="proj-name">Lunar ResQ — Rescue Robot &amp; Drone</h3></div>
+          <div class="proj-meta">Sept 2025 – 2026 · SoutheastCon 2026</div>
           <p class="proj-desc">Multi-robot rescue system coordinating an autonomous ground rover and aerial drone in real time.</p>
           <div class="proj-tags"><span class="ptag">ROS 2 Jazzy</span><span class="ptag">SLAM</span><span class="ptag">Behavior Trees</span><span class="ptag">Gazebo</span></div>
           <span class="proj-link">View Details →</span>
@@ -610,26 +616,16 @@ footer span{color:var(--accent)}
         <img class="thumb" src="assets/images/robot-claw.jpg" alt="Mining Mayhem object-sorting robot">
         <div class="proj-body">
           <div class="proj-top"><h3 class="proj-name">Mining Mayhem — Object Sorting Robot</h3></div>
-          <div class="proj-meta">Sept 2024 – March 2025 · IEEE SouthEast Con 2025</div>
+          <div class="proj-meta">Sept 2024 – March 2025 · SoutheastCon 2025</div>
           <p class="proj-desc">ROS-based differential-drive robot with SLAM and real-time object sorting.</p>
           <div class="proj-tags"><span class="ptag">ROS</span><span class="ptag">SLAM</span><span class="ptag">AprilTags</span><span class="ptag">Differential Drive</span></div>
-          <span class="proj-link">View Details →</span>
-        </div>
-      </div>
-      <div class="proj-card reveal" data-project="mini-tesla" tabindex="0" role="button" aria-haspopup="dialog">
-        <div class="thumb placeholder">ADD PROJECT IMAGE</div>
-        <div class="proj-body">
-          <div class="proj-top"><h3 class="proj-name">Mini Tesla — Regenerative EV Prototype</h3><span class="proj-badge">ACTIVE</span></div>
-          <div class="proj-meta">Personal Project</div>
-          <p class="proj-desc">A hands-on electric vehicle prototype exploring propulsion, drivetrain gearing, regenerative braking, and power distribution.</p>
-          <div class="proj-tags"><span class="ptag">EV</span><span class="ptag">DC Motors</span><span class="ptag">Regen Braking</span><span class="ptag">Custom Gearbox</span></div>
           <span class="proj-link">View Details →</span>
         </div>
       </div>
       <div class="proj-card reveal" data-project="startup" tabindex="0" role="button" aria-haspopup="dialog">
         <img class="thumb" src="assets/images/startup-assembled.jpg" alt="Plant-based automation device, fully assembled">
         <div class="proj-body">
-          <div class="proj-top"><h3 class="proj-name">Plant-Based Automated System</h3><span class="proj-badge">STEALTH</span></div>
+          <div class="proj-top"><h3 class="proj-name">Plant-Based Automated System</h3></div>
           <div class="proj-meta">Startup · 2023 – 2025</div>
           <p class="proj-desc">An automated plant-care device, designed and built end-to-end — mechanical enclosure, custom PCB, and embedded firmware.</p>
           <div class="proj-tags"><span class="ptag">Fusion 360</span><span class="ptag">PCB Design</span><span class="ptag">ATmega328P</span></div>
@@ -669,7 +665,7 @@ footer span{color:var(--accent)}
       <div class="hobby-card reveal">
         <div class="hobby-ico">🖨️</div>
         <h3>3D Printing</h3>
-        <p>Running a Prusa MK4S — functional parts for my robots, printer mods, and the occasional gift that took 14 hours longer than planned.</p>
+        <p>Running a Prusa MK4S for robot parts, printer mods, and the occasional print that takes much longer than expected.</p>
       </div>
       <div class="hobby-card reveal">
         <div class="hobby-ico">📷</div>
@@ -677,14 +673,19 @@ footer span{color:var(--accent)}
         <p>Most of the robot shots on this site are mine — I like making hardware look as good as it performs.</p>
       </div>
       <div class="hobby-card reveal">
-        <div class="hobby-ico">🔧</div>
-        <h3>Hardware Tinkering</h3>
-        <p>PCBs, soldering, and taking things apart to see why they work — then usually putting them back together.</p>
+        <div class="hobby-ico">🏋️</div>
+        <h3>Strength Training</h3>
+        <p>Training has taught me the same lesson engineering keeps reinforcing: progress comes from consistency, tracking small improvements, and showing up repeatedly.</p>
       </div>
       <div class="hobby-card reveal">
-        <div class="hobby-ico">🤖</div>
-        <h3>Robotics Community</h3>
-        <p>Competitions, workshops, and teaching — from IEEE SoutheastCon floors to showing 120+ students their first lines of Python.</p>
+        <div class="hobby-ico">🍳</div>
+        <h3>Cooking</h3>
+        <p>A practical hobby that keeps me grounded — experimenting with meals that are simple, high-protein, and sustainable during busy project weeks.</p>
+      </div>
+      <div class="hobby-card reveal">
+        <div class="hobby-ico">☕</div>
+        <h3>Coffee</h3>
+        <p>Part ritual, part debugging fuel. I enjoy finding good coffee spots to work, think, and reset between long build sessions.</p>
       </div>
     </div>
   </div>
@@ -699,12 +700,12 @@ footer span{color:var(--accent)}
     <div class="contact-cols">
       <div class="c-links reveal">
         <a href="mailto:mailtodaksh@vt.edu" class="c-link"><div class="ico">@</div>Email<span class="val">mailtodaksh@vt.edu</span></a>
-        <a href="https://www.linkedin.com/in/daksh-gupta" target="_blank" class="c-link"><div class="ico">in</div>LinkedIn<span class="val">/in/daksh-gupta</span></a>
+        <a href="https://www.linkedin.com/in/daksh-gupta-626ba11b5/" target="_blank" class="c-link"><div class="ico">in</div>LinkedIn<span class="val">/in/daksh-gupta</span></a>
         <a href="https://github.com/AdvanceUser2005" target="_blank" class="c-link"><div class="ico">gh</div>GitHub<span class="val">github.com/AdvanceUser2005</span></a>
       </div>
       <div id="signal" class="reveal">
         <canvas id="signal-canvas" width="120" height="64"></canvas>
-        <div class="signal-txt">STATUS <b>ONLINE</b><br>Lunar ResQ telemetry link<br>Ping response &lt; 40ms</div>
+        <div class="signal-txt">STATUS <b>ONLINE</b><br>Mini Tesla telemetry link<br>Ping response &lt; 40ms</div>
       </div>
     </div>
   </div>
@@ -739,8 +740,7 @@ window.addEventListener('scroll',()=>{
 const PROJECT_DETAILS = {
   'lunar-resq': {
     title: 'Lunar ResQ — Autonomous Rescue and Communication Robot and Drone',
-    badge: 'ACTIVE',
-    meta: 'September 2025 – Present · IEEE SouthEast Con Hardware Competition 2026',
+    meta: 'September 2025 – 2026 · SoutheastCon Hardware Competition 2026',
     media: [
       {type:'image', src:'assets/images/rover-duck-2.jpg', alt:'Lunar ResQ ground rover, front view'},
       {type:'image', src:'assets/images/rover-duck-1.jpg', alt:'Lunar ResQ ground rover with payload'},
@@ -757,7 +757,7 @@ const PROJECT_DETAILS = {
   },
   'mining-mayhem': {
     title: 'Mining Mayhem — Autonomous Object Sorting Robot',
-    meta: 'September 2024 – March 2025 · IEEE SouthEast Con Hardware Competition 2025',
+    meta: 'September 2024 – March 2025 · SoutheastCon Hardware Competition 2025',
     media: [
       {type:'image', src:'assets/images/robot-claw.jpg', alt:'Mining Mayhem object-sorting robot'},
       {type:'video', src:'assets/video/mining-mayhem-1.mp4', poster:'assets/images/mining-mayhem-video-1-poster.jpg', alt:'Mining Mayhem demo run 1'},
@@ -774,7 +774,7 @@ const PROJECT_DETAILS = {
   'mini-tesla': {
     title: 'Mini Tesla – Regenerative Electric Vehicle Prototype',
     badge: 'ACTIVE',
-    meta: 'Personal Project',
+    meta: 'Personal Project · 2026 – Present',
     tags: ['EV','DC Motors','Custom Gearbox','Regenerative Braking','Power Distribution'],
     desc: 'A hands-on electric vehicle prototype designed to explore the core engineering ideas behind modern EVs, including electric propulsion, drivetrain gearing, regenerative braking, and power distribution. The project focuses on building a small-scale car platform that uses DC motors for motion while experimenting with a custom gearbox to improve torque, speed control, and incline traversal. A major goal is studying regenerative braking at a practical level — how motor back-EMF, gear ratios, and motor-driver limitations affect the ability to recover energy when the vehicle slows down.',
     highlights: [
@@ -787,8 +787,8 @@ const PROJECT_DETAILS = {
   },
   'startup': {
     title: 'Plant-Based Automated System',
-    badge: 'STEALTH',
     meta: 'Startup · 2023 – 2025',
+    hideLink: true,
     media: [
       {type:'image', src:'assets/images/startup-model.jpg', alt:'Fusion 360 model of the enclosure'},
       {type:'image', src:'assets/images/startup-pcb.jpg', alt:'Double-layer PCB layout'},
@@ -844,7 +844,8 @@ const PROJECT_DETAILS = {
     tagsEl.innerHTML = p.tags.map(t=>`<span class="ptag">${t}</span>`).join('');
     descEl.textContent = p.desc;
     hlEl.innerHTML = '<div class="mh-label">Highlights</div><ul>' + p.highlights.map(h=>`<li>${h}</li>`).join('') + '</ul>';
-    linkEl.href = p.link || '#';
+    if(p.hideLink){ linkEl.style.display = 'none'; }
+    else { linkEl.style.display = ''; linkEl.href = p.link || '#'; }
 
     const media = p.media && p.media.length ? p.media : null;
     renderMedia(media ? media[0] : null);
