@@ -399,6 +399,17 @@ h2.h span{color:var(--accent);font-style:italic}
   font-family:var(--fm);font-size:.64rem;color:var(--warm);
   letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;
 }
+.modal-highlights .mh-label:not(:first-child){margin-top:20px}
+.modal-arch{
+  font-family:var(--fm);font-size:.72rem;line-height:1.55;color:var(--muted);
+  background:var(--bg);border:1px solid var(--border);border-radius:10px;
+  padding:14px 16px;margin:0;white-space:pre;overflow-x:auto;
+}
+.modal-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.demo-soon{
+  font-family:var(--fm);font-size:.72rem;letter-spacing:.04em;
+  color:var(--muted2);padding:7px 12px;border:1px dashed var(--border);border-radius:20px;
+}
 body.modal-lock{overflow:hidden}
 
 /* ── SIGNAL WIDGET (small technical accent) ─────── */
@@ -602,6 +613,16 @@ footer span{color:var(--accent)}
           <span class="proj-link">View Details →</span>
         </div>
       </div>
+      <div class="proj-card reveal" data-project="warehouse-fleet" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="thumb placeholder">ADD PROJECT IMAGE</div>
+        <div class="proj-body">
+          <div class="proj-top"><h3 class="proj-name">ROS 2 Warehouse Fleet Simulation</h3><span class="proj-badge">IN PROGRESS</span></div>
+          <div class="proj-meta">Summer 2026 · Independent Project</div>
+          <p class="proj-desc">Autonomous warehouse robot simulation with task execution, navigation, health monitoring, and fleet telemetry.</p>
+          <div class="proj-tags"><span class="ptag">ROS 2</span><span class="ptag">Nav2</span><span class="ptag">C++</span><span class="ptag">Gazebo</span><span class="ptag">Docker</span></div>
+          <span class="proj-link">View Details →</span>
+        </div>
+      </div>
       <div class="proj-card reveal" data-project="lunar-resq" tabindex="0" role="button" aria-haspopup="dialog">
         <img class="thumb" src="assets/images/rover-duck-2.jpg" alt="Lunar ResQ ground rover">
         <div class="proj-body">
@@ -651,7 +672,10 @@ footer span{color:var(--accent)}
       <div class="proj-tags" id="modal-tags"></div>
       <p class="modal-desc" id="modal-desc"></p>
       <div class="modal-highlights" id="modal-highlights"></div>
-      <a href="#" class="btn btn-dark" id="modal-link" target="_blank">↗ View on GitHub</a>
+      <div class="modal-actions">
+        <a href="#" class="btn btn-dark" id="modal-link" target="_blank">↗ View on GitHub</a>
+        <span class="demo-soon" id="modal-demo" style="display:none">Demo · Coming Soon</span>
+      </div>
     </div>
   </div>
 </div>
@@ -771,6 +795,41 @@ const PROJECT_DETAILS = {
     ],
     link: '#'
   },
+  'warehouse-fleet': {
+    title: 'ROS 2 Warehouse Fleet Simulation',
+    badge: 'IN PROGRESS',
+    meta: 'In Progress — Summer 2026 · Independent Robotics Software Project',
+    tags: ['ROS 2','C++','Python','Nav2','Gazebo','Docker','Fleet Telemetry','AWS Planned'],
+    desc: 'A ROS 2-based warehouse robot simulation focused on autonomous navigation, task execution, robot health monitoring, and fleet telemetry. The goal is to practice production-style robotics software patterns used where robots need to move reliably, report status, expose debugging data, and support fleet-level monitoring — inspired by real warehouse robotics problems like task assignment, structured-environment navigation, and telemetry pipelines for operations and debugging.',
+    highlightsLabel: "What I'm Building",
+    highlights: [
+      'Warehouse-style robot simulation environment',
+      'Autonomous navigation using ROS 2 and Nav2',
+      'Custom ROS 2 nodes/services for task execution',
+      'Robot state reporting for pose, battery, task status, and errors',
+      'Telemetry architecture for fleet monitoring',
+      'Dockerized development workflow',
+      'Planned AWS-based backend for fleet telemetry and alerts'
+    ],
+    architecture: 'Warehouse Robot Simulation\n        ↓\nROS 2 Navigation / Nav2\n        ↓\nTask Manager Node\n        ↓\nRobot Health Monitor\n        ↓\nTelemetry Publisher\n        ↓\nFleet Dashboard / AWS Backend',
+    progress: [
+      'Repository and roadmap created',
+      'ROS 2 workspace structure planned',
+      'Task manager and telemetry node architecture designed',
+      'Simulation and navigation build in progress'
+    ],
+    milestones: [
+      'Spawn warehouse robot in Gazebo',
+      'Add Nav2-based goal navigation',
+      'Implement task manager node',
+      'Add robot health monitoring',
+      'Publish telemetry locally',
+      'Add simple dashboard',
+      'Integrate AWS IoT/MQTT telemetry pipeline'
+    ],
+    demoSoon: true,
+    link: 'https://github.com/advanceuser2005/ros2-warehouse-fleet-sim'
+  },
   'mini-tesla': {
     title: 'Mini Tesla – Regenerative Electric Vehicle Prototype',
     badge: 'ACTIVE',
@@ -818,6 +877,7 @@ const PROJECT_DETAILS = {
   const descEl = document.getElementById('modal-desc');
   const hlEl = document.getElementById('modal-highlights');
   const linkEl = document.getElementById('modal-link');
+  const demoEl = document.getElementById('modal-demo');
   let lastFocused = null;
 
   function renderMedia(item){
@@ -843,7 +903,15 @@ const PROJECT_DETAILS = {
     metaEl.textContent = p.meta || '';
     tagsEl.innerHTML = p.tags.map(t=>`<span class="ptag">${t}</span>`).join('');
     descEl.textContent = p.desc;
-    hlEl.innerHTML = '<div class="mh-label">Highlights</div><ul>' + p.highlights.map(h=>`<li>${h}</li>`).join('') + '</ul>';
+    const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    const listBlock = (label, items) => '<div class="mh-label">'+label+'</div><ul>' + items.map(h=>`<li>${esc(h)}</li>`).join('') + '</ul>';
+    let hlHTML = '';
+    if(p.highlights) hlHTML += listBlock(p.highlightsLabel || 'Highlights', p.highlights);
+    if(p.architecture) hlHTML += '<div class="mh-label">System Architecture</div><pre class="modal-arch">' + esc(p.architecture) + '</pre>';
+    if(p.progress) hlHTML += listBlock('Current Progress', p.progress);
+    if(p.milestones) hlHTML += listBlock('Planned Milestones', p.milestones);
+    hlEl.innerHTML = hlHTML;
+    demoEl.style.display = p.demoSoon ? '' : 'none';
     if(p.hideLink){ linkEl.style.display = 'none'; }
     else { linkEl.style.display = ''; linkEl.href = p.link || '#'; }
 
