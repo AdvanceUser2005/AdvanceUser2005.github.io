@@ -508,7 +508,7 @@ footer span{color:var(--accent)}
     <h2 class="h reveal">Projects</h2>
     <div class="proj-grid">
       <div class="proj-card reveal" data-project="warehouse-fleet" tabindex="0" role="button" aria-haspopup="dialog">
-        <div class="thumb placeholder">ADD PROJECT IMAGE</div>
+        <img class="thumb" src="assets/images/warehouse-sim.jpg" alt="Warehouse fleet simulation environment">
         <div class="proj-body">
           <div class="proj-top"><h3 class="proj-name">ROS 2 Warehouse Fleet Simulation</h3><span class="proj-badge">IN PROGRESS</span></div>
           <div class="proj-meta">July 2026 – Present · Independent Project</div>
@@ -518,7 +518,7 @@ footer span{color:var(--accent)}
         </div>
       </div>
       <div class="proj-card reveal" data-project="mini-tesla" tabindex="0" role="button" aria-haspopup="dialog">
-        <div class="thumb placeholder">ADD PROJECT IMAGE</div>
+        <img class="thumb" src="assets/images/mini-tesla.jpg" alt="Mini Tesla 4-wheel robot chassis render">
         <div class="proj-body">
           <div class="proj-top"><h3 class="proj-name">Mini Tesla — Regenerative EV Prototype</h3><span class="proj-badge">IN PROGRESS</span></div>
           <div class="proj-meta">April 2026 – Present · Personal Project</div>
@@ -800,6 +800,7 @@ const PROJECT_DETAILS = {
     title: 'ROS 2 Warehouse Fleet Simulation',
     badge: 'IN PROGRESS',
     meta: 'In Progress — July 2026 · Independent Robotics Software Project',
+    media: [{type:'image', src:'assets/images/warehouse-sim.jpg', alt:'Warehouse fleet simulation environment'}],
     tags: ['ROS 2','C++','Python','Nav2','Gazebo','Docker','Fleet Telemetry','AWS Planned'],
     desc: 'A ROS 2-based warehouse robot simulation focused on autonomous navigation, task execution, robot health monitoring, and fleet telemetry. The goal is to practice production-style robotics software patterns used where robots need to move reliably, report status, expose debugging data, and support fleet-level monitoring — inspired by real warehouse robotics problems like task assignment, structured-environment navigation, and telemetry pipelines for operations and debugging.',
     highlightsLabel: "What I'm Building",
@@ -836,6 +837,7 @@ const PROJECT_DETAILS = {
     badge: 'IN PROGRESS',
     meta: 'Personal Project · April 2026 – Present',
     demoSoon: true,
+    media: [{type:'image', src:'assets/images/mini-tesla.jpg', alt:'Mini Tesla 4-wheel robot chassis render'}],
     tags: ['EV','DC Motors','Custom Gearbox','Regenerative Braking','Power Distribution'],
     desc: 'A hands-on electric vehicle prototype designed to explore the core engineering ideas behind modern EVs, including electric propulsion, drivetrain gearing, regenerative braking, and power distribution. The project focuses on building a small-scale car platform that uses DC motors for motion while experimenting with a custom gearbox to improve torque, speed control, and incline traversal. A major goal is studying regenerative braking at a practical level — how motor back-EMF, gear ratios, and motor-driver limitations affect the ability to recover energy when the vehicle slows down.',
     highlights: [
