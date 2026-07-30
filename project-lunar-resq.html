@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lunar ResQ — Daksh Gupta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="logo"><span class="br">[</span> Daksh Gupta <span class="br">]</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html#education">Education</a></li>
+      <li><a href="assets/resume.pdf" target="_blank" rel="noopener">Resume ↗</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="detail-top">
+  <div class="wrap">
+    <a class="back-link" href="projects.html">← All projects</a>
+    <p class="eyebrow">SoutheastCon Hardware Competition 2026 · September 2025 – 2026</p>
+    <h1>Lunar ResQ — autonomous rescue and communication robot and drone.</h1>
+    <div class="tags" style="margin-bottom:40px">
+      <span class="tag">ros2 jazzy</span><span class="tag">slam</span><span class="tag">behavior trees</span>
+      <span class="tag">depth camera + imu</span><span class="tag">gazebo</span><span class="tag">isaac sim</span>
+    </div>
+    <div class="dhero reveal">
+      <img src="assets/images/rover-duck-2.jpg" alt="Lunar ResQ ground rover, front view">
+    </div>
+
+    <div class="dbody">
+      <div class="dtext reveal">
+        <p>Developing a <strong>multi-robot rescue system</strong> enabling real-time communication and coordination between an autonomous ground rover and an aerial drone.</p>
+        <p>The mission: locate and rescue targets across a crater-strewn lunar course, with both robots working together under a strict <strong>3-minute mission window</strong>.</p>
+      </div>
+      <div class="reveal">
+        <div class="side-card">
+          <p class="cw-label">Highlights</p>
+          <ul>
+            <li>Implementing ROS 2 Jazzy navigation and SLAM relying solely on depth camera and IMU fusion</li>
+            <li>Building a behavior-tree framework for synchronized multi-agent task execution within 3-minute mission constraints</li>
+            <li>Simulating crater traversal and cooperative path optimization in Gazebo and Isaac Sim</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <div class="gitem reveal"><span class="gcap">Rover · with payload</span><img src="assets/images/rover-duck-1.jpg" alt="Lunar ResQ ground rover with payload"></div>
+      <div class="gitem reveal"><span class="gcap">Rover · side view</span><img src="assets/images/rover-duck-3.jpg" alt="Lunar ResQ ground rover, side view"></div>
+    </div>
+  </div>
+</section>
+
+<section class="detail-cta" style="padding-top:0">
+  <div class="wrap">
+    <div class="dark-card reveal">
+      <div>
+        <p class="eyebrow">Next</p>
+        <h2>Competition season, 2026.</h2>
+        <p>Code and results will be published after SoutheastCon 2026.</p>
+      </div>
+      <div class="btns">
+        <a href="projects.html" class="btn btn-light">All projects</a>
+        <a href="index.html#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Designed &amp; built by <b>Daksh Gupta</b> · Virginia Tech ECE · 2026
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

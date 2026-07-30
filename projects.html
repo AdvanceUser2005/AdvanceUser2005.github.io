@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Daksh Gupta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="logo"><span class="br">[</span> Daksh Gupta <span class="br">]</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html#education">Education</a></li>
+      <li><a href="assets/resume.pdf" target="_blank" rel="noopener">Resume ↗</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h1>All projects</h1>
+      <p>Everything I've built so far — competition robots, independent robotics software, and hardware products. Click any card for the full write-up.</p>
+    </div>
+    <div class="proj-grid">
+
+      <a class="pcard reveal" href="project-warehouse-fleet.html">
+        <div class="pmedia">
+          <span class="chip">Warehouse Fleet</span>
+          <img src="assets/images/warehouse-sim.jpg" alt="Warehouse fleet simulation environment">
+        </div>
+        <div class="pbody">
+          <span class="parrow">↗</span>
+          <span class="pbadge">In Progress</span>
+          <h3>ROS 2 warehouse fleet simulation.</h3>
+          <p class="pdesc">Autonomous Nav2 navigation, task execution, health monitoring, and fleet telemetry in a production-style warehouse sim.</p>
+          <div class="tags"><span class="tag">ros2</span><span class="tag">nav2</span><span class="tag">c++</span><span class="tag">gazebo</span><span class="tag">docker</span></div>
+        </div>
+      </a>
+
+      <a class="pcard reveal" href="project-mini-tesla.html">
+        <div class="pmedia placeholder"></div>
+        <div class="pbody">
+          <span class="parrow">↗</span>
+          <span class="pbadge">In Progress</span>
+          <h3>Mini Tesla — a regenerative EV prototype.</h3>
+          <p class="pdesc">A small-scale EV exploring propulsion, drivetrain gearing, regenerative braking, and power distribution.</p>
+          <div class="tags"><span class="tag">ev</span><span class="tag">dc motors</span><span class="tag">regen braking</span><span class="tag">custom gearbox</span></div>
+        </div>
+      </a>
+
+      <a class="pcard reveal" href="project-lunar-resq.html">
+        <div class="pmedia">
+          <span class="chip">Lunar ResQ</span>
+          <img src="assets/images/rover-duck-2.jpg" alt="Lunar ResQ autonomous rescue rover">
+        </div>
+        <div class="pbody">
+          <span class="parrow">↗</span>
+          <h3>Autonomous rescue rover and drone.</h3>
+          <p class="pdesc">A multi-robot rescue system for SoutheastCon 2026 with ROS 2 Jazzy SLAM and behavior-tree mission coordination.</p>
+          <div class="tags"><span class="tag">ros2 jazzy</span><span class="tag">slam</span><span class="tag">behavior trees</span><span class="tag">gazebo</span></div>
+        </div>
+      </a>
+
+      <a class="pcard split reveal" href="project-mining-mayhem.html">
+        <div class="pmedia">
+          <span class="chip">Mining Mayhem</span>
+          <video src="assets/video/mining-mayhem-2.mp4" poster="assets/images/mining-mayhem-video-2-poster.jpg" autoplay muted loop playsinline></video>
+        </div>
+        <div class="pbody">
+          <span class="parrow">↗</span>
+          <h3>Autonomous object-sorting robot with SLAM.</h3>
+          <p class="pdesc">A ROS-based differential-drive robot using AprilTags and wheel odometry for mapping, alignment, and real-time sorting.</p>
+          <div class="tags"><span class="tag">ros</span><span class="tag">slam</span><span class="tag">apriltags</span><span class="tag">wheel odometry</span></div>
+        </div>
+      </a>
+
+      <a class="pcard split full reveal" href="project-startup.html">
+        <div class="pmedia">
+          <span class="chip">Startup</span>
+          <img src="assets/images/startup-assembled.jpg" alt="Plant-based automation device, fully assembled">
+        </div>
+        <div class="pbody">
+          <span class="parrow">↗</span>
+          <h3>Plant-based automated system, designed and built end to end.</h3>
+          <p class="pdesc">An automated plant-care device — mechanical enclosure in Fusion 360, custom double-layer PCB, and embedded firmware on a bare ATmega328P at 16 MHz.</p>
+          <div class="tags"><span class="tag">fusion 360</span><span class="tag">pcb design</span><span class="tag">atmega328p</span><span class="tag">embedded c</span></div>
+        </div>
+      </a>
+
+    </div>
+    <div class="proj-cta reveal">
+      <a href="https://github.com/AdvanceUser2005" target="_blank" rel="noopener" class="btn btn-dark">More on GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Designed &amp; built by <b>Daksh Gupta</b> · Virginia Tech ECE · 2026
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

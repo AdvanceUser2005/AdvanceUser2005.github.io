@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mining Mayhem — Daksh Gupta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="logo"><span class="br">[</span> Daksh Gupta <span class="br">]</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html#education">Education</a></li>
+      <li><a href="assets/resume.pdf" target="_blank" rel="noopener">Resume ↗</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="detail-top">
+  <div class="wrap">
+    <a class="back-link" href="projects.html">← All projects</a>
+    <p class="eyebrow">SoutheastCon Hardware Competition 2025 · September 2024 – March 2025</p>
+    <h1>Mining Mayhem — autonomous object sorting robot.</h1>
+    <div class="tags" style="margin-bottom:40px">
+      <span class="tag">ros</span><span class="tag">slam</span><span class="tag">apriltags</span>
+      <span class="tag">wheel odometry</span><span class="tag">differential drive</span>
+    </div>
+    <div class="dhero portrait reveal" style="--backdrop:url('assets/images/mining-mayhem-video-2-poster.jpg')">
+      <video src="assets/video/mining-mayhem-2.mp4" poster="assets/images/mining-mayhem-video-2-poster.jpg" controls autoplay muted loop playsinline></video>
+    </div>
+
+    <div class="dbody">
+      <div class="dtext reveal">
+        <p>Engineered a <strong>ROS-based differential-drive robot</strong> with SLAM and real-time object-sorting capabilities for the SoutheastCon 2025 hardware competition.</p>
+        <p>The robot maps its arena, locates scattered objects, and sorts them autonomously — combining perception, localization, and manipulation in a single tightly-timed run.</p>
+      </div>
+      <div class="reveal">
+        <div class="side-card">
+          <p class="cw-label">Highlights</p>
+          <ul>
+            <li>Utilized AprilTags and wheel odometry for localization and target detection, enabling fast mapping and precise alignment</li>
+            <li>Collaborated in a 3-member interdisciplinary team integrating hardware, simulation, and embedded software layers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <div class="gitem reveal"><span class="gcap">The robot</span><img src="assets/images/robot-claw.jpg" alt="Mining Mayhem object-sorting robot"></div>
+      <div class="gitem portrait reveal" style="--backdrop:url('assets/images/mining-mayhem-video-1-poster.jpg')"><span class="gcap">Demo run 1</span><video src="assets/video/mining-mayhem-1.mp4" poster="assets/images/mining-mayhem-video-1-poster.jpg" controls muted playsinline></video></div>
+    </div>
+  </div>
+</section>
+
+<section class="detail-cta" style="padding-top:0">
+  <div class="wrap">
+    <div class="dark-card reveal">
+      <div>
+        <p class="eyebrow">More</p>
+        <h2>See what came next.</h2>
+        <p>Lunar ResQ builds on everything this robot taught me.</p>
+      </div>
+      <div class="btns">
+        <a href="project-lunar-resq.html" class="btn btn-light">Lunar ResQ ↗</a>
+        <a href="projects.html" class="btn btn-ghost">All projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Designed &amp; built by <b>Daksh Gupta</b> · Virginia Tech ECE · 2026
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
