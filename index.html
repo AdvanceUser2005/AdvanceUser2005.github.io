@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Daksh Gupta — Robotics &amp; Embedded Systems</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,300..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -146,7 +146,27 @@
   <div class="wrap">
     <p class="eyebrow reveal">About</p>
     <div class="about">
-      <h2 class="reveal">I like building things that exist in the physical world and respond intelligently to it.</h2>
+      <div>
+        <h2 class="reveal">I like building things that exist in the physical world and respond intelligently to it.</h2>
+        <div class="reveal">
+        <figure class="polaroid">
+          <div class="pl-media">
+            <img src="assets/images/team-photo.jpg" alt="Daksh with the Virginia Tech CRO team">
+            <!-- Arrow + label live in the SVG's 400x300 space (the photo's own
+                 aspect), so they scale with it. Tip is 249,85 — it appears in
+                 four paths (two halo, two ink); move them together. -->
+            <svg class="pl-anno" viewBox="0 0 400 300" aria-hidden="true">
+              <path class="halo" d="M300 46 C 285 51, 253 67, 249 85"/>
+              <path class="halo" d="M249 85 L 255.9 77.8 M249 85 L 246.2 75.4"/>
+              <path class="ink" d="M300 46 C 285 51, 253 67, 249 85"/>
+              <path class="ink" d="M249 85 L 255.9 77.8 M249 85 L 246.2 75.4"/>
+              <text x="315" y="33" text-anchor="middle" font-size="23" transform="rotate(-7 315 33)">That's me!</text>
+            </svg>
+          </div>
+          <figcaption>The VT CRO team</figcaption>
+        </figure>
+        </div>
+      </div>
       <div class="about-card reveal">
         <p>I'm a <strong>Computer Engineering student at Virginia Tech</strong> (Class of 2028), specializing in robotics and autonomous systems. The messier the integration between hardware and software, the more I enjoy it.</p>
         <p>I'm a software engineer on the <strong>Competitive Robotics Organization (CRO)</strong> team at Virginia Tech — where most of my real engineering education has happened, outside the classroom.</p>
