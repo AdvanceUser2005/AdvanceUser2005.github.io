@@ -24,38 +24,172 @@
   </nav>
 </header>
 
-<section class="detail-top">
+<section class="detail-top" style="padding-bottom:0">
   <div class="wrap">
     <a class="back-link" href="projects.html">← All projects</a>
     <p class="eyebrow">Personal Project · April 2026 – Present</p>
-    <h1>Mini Tesla — regenerative electric vehicle prototype.</h1>
+    <h1>Mini Tesla — autonomous EV &amp; intelligent robotics platform.</h1>
     <p class="dmeta"><span class="pbadge" style="margin:0 12px 0 0">In Progress</span> Demo · Coming Soon</p>
     <div class="tags" style="margin-bottom:40px">
-      <span class="tag">ev</span><span class="tag">dc motors</span><span class="tag">custom gearbox</span>
-      <span class="tag">regenerative braking</span><span class="tag">power distribution</span>
+      <span class="tag">ros 2</span><span class="tag">active slam</span><span class="tag">semantic slam</span>
+      <span class="tag">predictive perception</span><span class="tag">mpc</span><span class="tag">regenerative braking</span>
+      <span class="tag">mecanum</span><span class="tag">fusion 360</span><span class="tag">teensy 4.1</span>
     </div>
     <div class="dhero reveal">
       <img src="assets/images/mini-tesla-robot.jpg" alt="Mini Tesla mecanum-wheel robot with Velodyne LiDAR">
     </div>
 
-    <div class="dbody">
-      <div class="dtext reveal">
-        <p>A hands-on electric vehicle prototype designed to explore the core engineering ideas behind modern EVs: <strong>electric propulsion, drivetrain gearing, regenerative braking, and power distribution</strong>.</p>
-        <p>The project focuses on building a small-scale car platform that uses DC motors for motion while experimenting with a custom gearbox to improve torque, speed control, and incline traversal.</p>
-        <p>A major goal is studying regenerative braking at a practical level — how <strong>motor back-EMF, gear ratios, and motor-driver limitations</strong> affect the ability to recover energy when the vehicle slows down.</p>
-      </div>
-      <div class="reveal">
-        <div class="side-card">
-          <p class="cw-label">Highlights</p>
-          <ul>
-            <li>Milestone-based development: component selection, schematic planning, and parts sourcing</li>
-            <li>Mechanical assembly and drivetrain testing</li>
-            <li>Electrical integration and regenerative braking analysis</li>
-            <li>Combines robotics, embedded systems, mechanical design, and EV fundamentals into one platform</li>
-          </ul>
+    <div class="mt-intro">
+      <p class="reveal">Mini Tesla is a miniature electric vehicle I'm designing from scratch to explore <strong>advanced robotics, autonomous decision-making, predictive perception, and energy-efficient motion control</strong>.</p>
+      <blockquote class="mt-quote reveal">
+        The objective: a robot that doesn't just navigate its environment, but <em>actively reasons about what it sees, predicts what happens next, and adapts its behavior in real time.</em>
+        <small>Mini Tesla · the goal</small>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH GOALS -->
+<section class="mt-section">
+  <div class="wrap">
+    <p class="eyebrow reveal">Research &amp; Development</p>
+    <h2 class="mt-h reveal">Six goals, one platform.</h2>
+    <p class="mt-sub reveal">Each goal builds on the last — from choosing where to look, to understanding what's there, to predicting where it's going and braking efficiently when it matters.</p>
+
+    <div class="goal-grid">
+      <article class="goal reveal">
+        <div class="goal-num">01</div>
+        <h3>Active SLAM &amp; Autonomous Exploration</h3>
+        <p>Develop an Active SLAM system in ROS 2 that enables the robot to intelligently select where to explore next, reducing map uncertainty while balancing information gain, navigation safety, and computational cost.</p>
+      </article>
+
+      <article class="goal reveal">
+        <div class="goal-num">02</div>
+        <h3>Semantic SLAM &amp; Environment Understanding</h3>
+        <p>Go beyond traditional geometric mapping by integrating semantic object recognition into 3D maps. Using an iPhone Pro's camera and LiDAR, alongside additional onboard sensors, the goal is to identify, classify, and spatially track objects rather than represent the environment only as geometric obstacles.</p>
+      </article>
+
+      <article class="goal reveal">
+        <div class="goal-num">03</div>
+        <h3>Predictive Perception &amp; Dynamic Object Tracking</h3>
+        <p>Develop a perception pipeline capable of identifying moving objects, estimating their velocity and direction, and predicting future trajectories.</p>
+        <div class="goal-demo">
+          <b>Demonstration goal</b>
+          <strong>Detect a football thrown or kicked toward the robot, estimate its trajectory, predict the potential collision point, and autonomously execute a braking or evasive maneuver</strong> before impact.
+        </div>
+      </article>
+
+      <article class="goal reveal">
+        <div class="goal-num">04</div>
+        <h3>iPhone Pro as a Visual-LiDAR Perception System</h3>
+        <p>Investigate using an iPhone Pro as an onboard RGB-D sensing platform, streaming camera and LiDAR-derived depth data into a ROS 2 environment running on Linux.</p>
+        <p>This involves bridging Apple's ARKit-based sensing system with the robot's localization, mapping, and perception pipelines, including investigating calibration, synchronization, and real-time streaming latency.</p>
+      </article>
+
+      <article class="goal reveal">
+        <div class="goal-num">05</div>
+        <h3>Predictive Motion Planning &amp; Collision Avoidance</h3>
+        <p>Develop a motion-planning system that responds to predicted future obstacle positions, not just their current locations. Explore model predictive control (MPC), time-to-collision estimation, and dynamic trajectory replanning to support safe, high-speed navigation.</p>
+      </article>
+
+      <article class="goal reveal">
+        <div class="goal-num">06</div>
+        <h3>Intelligent Regenerative Braking</h3>
+        <p>Investigate energy-aware control strategies that combine autonomous motion planning with regenerative braking. The goal is to experimentally characterize energy recovery and evaluate whether predicted braking events can improve stopping performance and energy efficiency.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MECHANICAL -->
+<section class="mt-section">
+  <div class="wrap">
+    <p class="eyebrow reveal">Mechanical Development</p>
+    <h2 class="mt-h reveal">Designed and printed by me.</h2>
+
+    <div class="mech">
+      <div class="mech-text reveal">
+        <p><strong>Designed entirely by me in Autodesk Fusion 360.</strong> The chassis uses four encoder-equipped geared DC motors with mecanum wheels, a modular mechanical architecture, and a dedicated platform for onboard computing and sensors.</p>
+        <p>All custom chassis components are fabricated using <strong>PLA on a Prusa MK4S 3D printer</strong>.</p>
+        <div class="spec-grid">
+          <div class="spec-tile"><b>4×</b><span>Encoder-equipped geared DC motors</span></div>
+          <div class="spec-tile"><b>Mecanum</b><span>Wheels on a modular chassis</span></div>
+          <div class="spec-tile"><b>PLA</b><span>Printed on a Prusa MK4S</span></div>
+          <div class="spec-tile"><b>Fusion 360</b><span>Designed entirely by me</span></div>
         </div>
       </div>
+      <figure class="mech-photo reveal">
+        <img src="assets/images/mini-tesla-detail.jpg" alt="Side view of the Mini Tesla chassis showing the mecanum drivetrain, LiDAR mast, and laptop compute deck">
+        <figcaption><b>Current build</b> — mecanum drivetrain, LiDAR mast, laptop compute deck, and a front-mounted iPhone.</figcaption>
+      </figure>
     </div>
+
+    <h3 class="evo-title reveal">Chassis evolution</h3>
+    <div class="evo">
+      <div class="evo-card reveal">
+        <span class="evo-v">Version 1</span>
+        <h4>Initial Architecture</h4>
+        <p>Established the fundamental chassis layout, drivetrain positioning, and mechanical packaging requirements.</p>
+      </div>
+      <div class="evo-card reveal">
+        <span class="evo-v">Version 2</span>
+        <h4>Structural &amp; Assembly Refinement</h4>
+        <p>Focused on improving motor mounting, component clearances, structural support, and assembly accessibility.</p>
+      </div>
+      <div class="evo-card latest reveal">
+        <span class="evo-v">Version 3 · Latest</span>
+        <h4>Modular Robotics Platform</h4>
+        <p>Refined the design for sensor integration, removable electronics, cable management, M2.5 fasteners, heat-set inserts, and mounting space for a laptop-based computing system.</p>
+      </div>
+    </div>
+    <p class="evo-note reveal">Each iteration is driven by the practical challenges of turning a mechanical CAD model into a functional autonomous robotic vehicle.</p>
+  </div>
+</section>
+
+<!-- CURRENT DEVELOPMENT -->
+<section class="mt-section">
+  <div class="wrap">
+    <p class="eyebrow reveal">Current Development</p>
+    <h2 class="mt-h reveal">Where the build stands.</h2>
+    <p class="mt-sub reveal">The mechanical design is done; the electronics, simulation, and autonomy stack are now being built on top of it.</p>
+
+    <div class="status">
+      <div class="status-col done reveal">
+        <h3><span class="dot"></span>Completed</h3>
+        <ul>
+          <li>Mechanical CAD design</li>
+          <li>Primary drivetrain architecture</li>
+        </ul>
+      </div>
+      <div class="status-col doing reveal">
+        <h3><span class="dot"></span>In Progress</h3>
+        <ul>
+          <li>Chassis fabrication</li>
+          <li>Drivetrain assembly</li>
+          <li>Teensy 4.1 integration</li>
+          <li>Motor-driver wiring</li>
+          <li>Encoder interfacing</li>
+          <li>Electronics and PCB design</li>
+          <li>Simulation</li>
+          <li>Autonomous software stack</li>
+        </ul>
+      </div>
+      <div class="status-col next reveal">
+        <h3><span class="dot"></span>Upcoming</h3>
+        <ul>
+          <li>Closed-loop motor control</li>
+          <li>iPhone-to-ROS 2 sensor streaming</li>
+          <li>Active and Semantic SLAM</li>
+          <li>Dynamic-object trajectory prediction</li>
+          <li>Regenerative-braking experiments</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="mt-close reveal">
+      <span>The long-term goal</span>
+      A research-oriented autonomous vehicle capable of perceiving, predicting, planning, and reacting to dynamic environments — while investigating energy-efficient electric propulsion.
+    </p>
   </div>
 </section>
 

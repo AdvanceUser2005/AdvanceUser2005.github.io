@@ -441,3 +441,157 @@ footer{
   font-size:.88rem;color:var(--gray2);
 }
 footer b{color:var(--gray);font-weight:600}
+
+/* ── MINI TESLA PAGE ─────────────────────────────── */
+.mt-section{padding:96px 0 0}
+.mt-h{
+  font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:700;
+  letter-spacing:-.03em;line-height:1.1;margin-bottom:14px;
+}
+.mt-sub{color:var(--gray);font-size:1.1rem;max-width:660px;line-height:1.75;margin-bottom:44px}
+
+.mt-intro{
+  display:grid;grid-template-columns:1fr 1.08fr;gap:56px;align-items:center;
+  padding-top:72px;
+}
+.mt-intro p{font-size:1.22rem;color:var(--gray);line-height:1.8}
+.mt-intro p strong{color:var(--ink);font-weight:600}
+.mt-quote{
+  position:relative;background:var(--dark);color:#F4F1EA;
+  border-radius:var(--radius-lg);padding:56px 48px 44px;
+  font-size:clamp(1.3rem,2.1vw,1.75rem);font-weight:500;
+  letter-spacing:-.015em;line-height:1.45;
+  box-shadow:var(--shadow);
+}
+.mt-quote::before{
+  content:'\201C';position:absolute;top:14px;left:34px;
+  font-family:Georgia,serif;font-size:5.2rem;line-height:1;
+  color:rgba(255,255,255,.16);
+}
+.mt-quote em{font-style:italic;font-weight:600;color:#fff}
+.mt-quote small{
+  display:block;margin-top:26px;
+  font-size:.68rem;font-weight:600;letter-spacing:.24em;
+  text-transform:uppercase;color:#8F8D86;
+}
+
+.goal-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.goal{
+  background:var(--card);border-radius:var(--radius-lg);box-shadow:var(--shadow);
+  padding:36px 38px 38px;display:flex;flex-direction:column;gap:12px;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.goal:hover{transform:translateY(-4px);box-shadow:0 30px 64px -24px rgba(27,27,26,.2), 0 4px 14px rgba(27,27,26,.05)}
+.goal-num{
+  display:flex;align-items:center;gap:12px;
+  font-size:.78rem;font-weight:700;letter-spacing:.22em;color:var(--maroon);
+}
+.goal-num::after{content:'';flex:1;height:1px;background:var(--line)}
+.goal h3{font-size:1.34rem;font-weight:700;letter-spacing:-.02em;line-height:1.25}
+.goal p{color:var(--gray);font-size:1.02rem;line-height:1.75}
+.goal-demo{
+  margin-top:10px;background:var(--dark);color:#E6E3DB;
+  border-radius:var(--radius-md);padding:22px 24px;
+  font-size:.99rem;line-height:1.7;
+}
+.goal-demo b{
+  display:block;font-size:.66rem;font-weight:700;letter-spacing:.24em;
+  text-transform:uppercase;color:#8F8D86;margin-bottom:10px;
+}
+.goal-demo strong{color:#fff;font-weight:600}
+
+.mech{display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:start}
+.mech-text p{font-size:1.12rem;color:var(--gray);line-height:1.8;margin-bottom:20px}
+.mech-text p strong{color:var(--ink);font-weight:600}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.spec-tile{
+  background:var(--card);border-radius:var(--radius-md);
+  box-shadow:var(--shadow-sm);padding:24px 26px;
+}
+.spec-tile b{display:block;font-size:1.65rem;font-weight:700;letter-spacing:-.03em;line-height:1.15;margin-bottom:6px}
+.spec-tile span{font-size:.9rem;color:var(--gray2);line-height:1.5}
+.mech-photo{
+  position:relative;border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow);background:#111;
+}
+.mech-photo img{width:100%;height:auto}
+.mech-photo figcaption{
+  position:absolute;left:14px;right:14px;bottom:14px;
+  background:rgba(250,249,246,.94);color:var(--ink);
+  font-size:.82rem;font-weight:500;line-height:1.5;
+  padding:12px 16px;border-radius:14px;backdrop-filter:blur(6px);
+}
+.mech-photo figcaption b{font-weight:700}
+
+.evo-title{
+  font-size:clamp(1.5rem,2.4vw,1.9rem);font-weight:700;letter-spacing:-.025em;
+  margin:80px 0 26px;
+}
+.evo{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.evo-card{
+  position:relative;background:var(--card);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow);padding:34px 34px 38px;
+}
+.evo-card:not(:last-child)::after{
+  content:'\2192';position:absolute;right:-29px;top:44px;z-index:2;
+  width:30px;height:30px;border-radius:50%;
+  background:var(--bg);color:var(--gray2);
+  display:flex;align-items:center;justify-content:center;font-size:.95rem;
+}
+.evo-v{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#F1EEE7;color:var(--gray);
+  font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  padding:7px 15px;border-radius:999px;margin-bottom:20px;
+}
+.evo-card.latest .evo-v{background:var(--maroon);color:#fff}
+.evo-card h4{font-size:1.2rem;font-weight:700;letter-spacing:-.015em;line-height:1.3;margin-bottom:12px}
+.evo-card p{color:var(--gray);font-size:.99rem;line-height:1.75}
+.evo-note{
+  margin-top:34px;text-align:center;color:var(--gray2);
+  font-size:1.02rem;font-style:italic;line-height:1.7;
+}
+
+.status{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.status-col{
+  --c:#C9C5BA;
+  background:var(--card);border-radius:var(--radius-lg);box-shadow:var(--shadow);
+  padding:34px 34px 38px;
+}
+.status-col.done{--c:#2E6B4F}
+.status-col.doing{--c:#C9862B}
+.status-col h3{
+  display:flex;align-items:center;gap:12px;
+  font-size:1.18rem;font-weight:700;letter-spacing:-.015em;margin-bottom:24px;
+}
+.status-col h3 .dot{width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:0 0 0 5px color-mix(in srgb,var(--c) 18%,transparent)}
+.status-col ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+.status-col li{position:relative;padding-left:26px;color:var(--gray);font-size:1rem;line-height:1.6}
+.status-col li::before{
+  content:'';position:absolute;left:4px;top:.62em;
+  width:8px;height:8px;border-radius:50%;background:var(--c);
+}
+
+.mt-close{
+  max-width:880px;margin:0 auto;padding:96px 0 84px;text-align:center;
+  font-size:clamp(1.3rem,2.3vw,1.8rem);font-style:italic;font-weight:450;
+  letter-spacing:-.01em;line-height:1.55;color:var(--ink);
+}
+.mt-close span{
+  display:block;font-style:normal;margin-bottom:20px;
+  font-size:.72rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gray2);
+}
+
+@media(max-width:960px){
+  .mt-section{padding-top:72px}
+  .mt-intro,.mech{grid-template-columns:1fr;gap:34px}
+  .mt-intro{padding-top:52px}
+  .goal-grid{grid-template-columns:1fr}
+  .evo,.status{grid-template-columns:1fr}
+  .evo-card:not(:last-child)::after{display:none}
+  .evo-title{margin-top:60px}
+  .mt-quote{padding:50px 32px 38px}
+  .goal,.evo-card,.status-col{padding:30px 28px 32px}
+  .spec-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){.spec-grid{grid-template-columns:1fr}}
