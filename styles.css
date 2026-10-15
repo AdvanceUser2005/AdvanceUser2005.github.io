@@ -594,3 +594,22 @@ footer b{color:var(--gray);font-weight:600}
   font-size:.92rem;color:var(--gray);line-height:1.55;
 }
 .cad-fig figcaption b{color:var(--ink);font-weight:700}
+
+/* ── "BIGGEST PROJECT" CALLOUTS ──────────────────── */
+.biggest{
+  background:var(--maroon);color:#fff;border-radius:var(--radius-md);
+  padding:22px 30px 24px;margin:18px 0 0;
+}
+.biggest small{
+  display:block;font-size:.7rem;font-weight:700;letter-spacing:.26em;
+  text-transform:uppercase;opacity:.8;margin-bottom:8px;
+}
+.biggest b{display:block;font-size:clamp(1.35rem,2.1vw,1.85rem);font-weight:700;letter-spacing:-.03em;line-height:1.15}
+.biggest.wide{margin:0 0 38px;padding:30px 38px 34px;border-radius:var(--radius-lg)}
+.biggest.wide b{font-size:clamp(1.9rem,3.8vw,3.1rem);max-width:900px}
+.biggest.wide small{font-size:.76rem;margin-bottom:12px}
+.pcard .biggest-tag{
+  display:inline-flex;align-self:flex-start;background:var(--maroon);color:#fff;
+  font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:7px 14px;border-radius:999px;margin-bottom:14px;
+}
