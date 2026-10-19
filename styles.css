@@ -613,3 +613,48 @@ footer b{color:var(--gray);font-weight:600}
   font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
   padding:7px 14px;border-radius:999px;margin-bottom:14px;
 }
+
+/* ── MINI TESLA: ANNOTATED CAD SECTIONS ──────────── */
+.xsec-sub{color:var(--gray);font-size:1.02rem;line-height:1.7;max-width:660px;margin:-12px 0 24px}
+.xsec-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.xsec-tab{
+  font:inherit;font-size:.86rem;font-weight:600;cursor:pointer;
+  background:var(--card);color:var(--gray);border:1px solid var(--line);
+  padding:9px 18px;border-radius:999px;transition:background .2s,color .2s,border-color .2s;
+}
+.xsec-tab:hover{color:var(--ink);border-color:#D6D1C5}
+.xsec-tab[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.xsec-tab:focus-visible,.xsec-list li:focus-visible{outline:2px solid var(--maroon);outline-offset:2px}
+.xsec-panel{display:grid;grid-template-columns:1.4fr 1fr;gap:34px;align-items:start}
+.xsec-panel[hidden]{display:none}
+.xsec-fig{
+  position:relative;margin:0;border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow);background:#7a7a7a;
+}
+.xsec-fig img{width:100%;height:auto}
+.xsec-fig svg{position:absolute;inset:0;width:100%;height:100%}
+.co{cursor:pointer;transition:opacity .2s}
+.co-shadow{stroke:rgba(0,0,0,.35);stroke-linecap:round}
+.co-line{stroke:#fff;stroke-linecap:round}
+.co-ring{fill:none;stroke:#fff}
+.co-badge{fill:var(--maroon);stroke:#fff}
+.co text{fill:#fff;font-family:var(--ff);font-weight:700;text-anchor:middle;dominant-baseline:central}
+.xsec-fig.focus .co:not(.on){opacity:.22}
+.xsec-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.xsec-list li{
+  display:flex;gap:14px;align-items:flex-start;cursor:default;
+  background:var(--card);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);
+  padding:16px 18px;border:1px solid transparent;transition:border-color .2s,transform .2s;
+}
+.xsec-list li.on{border-color:var(--maroon);transform:translateX(4px)}
+.xsec-list .xn{
+  flex:none;width:26px;height:26px;border-radius:50%;margin-top:1px;
+  background:var(--maroon);color:#fff;font-size:.8rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.xsec-list b{display:block;font-size:1rem;font-weight:700;letter-spacing:-.01em;margin-bottom:3px}
+.xsec-list p{color:var(--gray);font-size:.93rem;line-height:1.6}
+@media(max-width:960px){
+  .xsec-panel{grid-template-columns:1fr;gap:20px}
+  .xsec-list li.on{transform:none}
+}

@@ -126,6 +126,169 @@
       </figure>
     </div>
 
+    <div class="xsec reveal" data-xsec>
+      <h3 class="evo-title">Design decisions, in section</h3>
+      <p class="xsec-sub">Section cuts from the CAD model. Each number marks a design decision. Hover over or tap a number to highlight it.</p>
+      <div class="xsec-tabs" role="tablist" aria-label="CAD section views">
+        <button class="xsec-tab" role="tab" id="xt-assembly" aria-controls="xp-assembly" aria-selected="true">Full assembly</button>
+        <button class="xsec-tab" role="tab" id="xt-side" aria-controls="xp-side" aria-selected="false" tabindex="-1">Side section</button>
+        <button class="xsec-tab" role="tab" id="xt-plan" aria-controls="xp-plan" aria-selected="false" tabindex="-1">Plan section</button>
+        <button class="xsec-tab" role="tab" id="xt-deck" aria-controls="xp-deck" aria-selected="false" tabindex="-1">Deck &amp; rail cut</button>
+      </div>
+      <div class="xsec-panel" role="tabpanel" id="xp-assembly" aria-labelledby="xt-assembly">
+        <figure class="xsec-fig">
+          <img src="assets/images/mt-section-assembly.jpg" width="1150" height="1028" alt="Full assembly, isometric view" loading="lazy">
+          <svg viewBox="0 0 1150 1028" aria-hidden="true">
+            <defs><marker id="ah-assembly" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#fff"/></marker></defs>
+            <g class="co" data-n="1">
+              <line x1="534" y1="99" x2="435" y2="135" class="co-shadow" stroke-width="8.3"/>
+              <line x1="534" y1="99" x2="435" y2="135" class="co-line" stroke-width="3.2" marker-end="url(#ah-assembly)"/>
+              <circle cx="420" cy="140" r="11" class="co-ring" stroke-width="3.2"/>
+              <circle cx="560" cy="90" r="28" class="co-badge" stroke-width="3.2"/>
+              <text x="560" y="90" font-size="32">1</text>
+            </g>
+            <g class="co" data-n="2">
+              <line x1="677" y1="275" x2="523" y2="377" class="co-shadow" stroke-width="8.3"/>
+              <line x1="677" y1="275" x2="523" y2="377" class="co-line" stroke-width="3.2" marker-end="url(#ah-assembly)"/>
+              <circle cx="510" cy="386" r="11" class="co-ring" stroke-width="3.2"/>
+              <circle cx="700" cy="260" r="28" class="co-badge" stroke-width="3.2"/>
+              <text x="700" y="260" font-size="32">2</text>
+            </g>
+            <g class="co" data-n="3">
+              <line x1="905" y1="432" x2="589" y2="579" class="co-shadow" stroke-width="8.3"/>
+              <line x1="905" y1="432" x2="589" y2="579" class="co-line" stroke-width="3.2" marker-end="url(#ah-assembly)"/>
+              <circle cx="575" cy="586" r="11" class="co-ring" stroke-width="3.2"/>
+              <circle cx="930" cy="420" r="28" class="co-badge" stroke-width="3.2"/>
+              <text x="930" y="420" font-size="32">3</text>
+            </g>
+            <g class="co" data-n="4">
+              <line x1="1052" y1="699" x2="815" y2="691" class="co-shadow" stroke-width="8.3"/>
+              <line x1="1052" y1="699" x2="815" y2="691" class="co-line" stroke-width="3.2" marker-end="url(#ah-assembly)"/>
+              <circle cx="800" cy="690" r="11" class="co-ring" stroke-width="3.2"/>
+              <circle cx="1080" cy="700" r="28" class="co-badge" stroke-width="3.2"/>
+              <text x="1080" y="700" font-size="32">4</text>
+            </g>
+          </svg>
+        </figure>
+        <ol class="xsec-list">
+          <li data-n="1" tabindex="0"><span class="xn">1</span><div><b>Raised LiDAR mast</b><p>Lifts the LiDAR&#x27;s scan plane above the laptop and deck, so the robot never blocks its own 360° sweep.</p></div></li>
+          <li data-n="2" tabindex="0"><span class="xn">2</span><div><b>Corner locators</b><p>The top deck is the laptop bay. Printed L-corners keep the laptop from sliding under hard acceleration and braking.</p></div></li>
+          <li data-n="3" tabindex="0"><span class="xn">3</span><div><b>Two-piece deck</b><p>Split into two plates so each one fits on the MK4S print bed.</p></div></li>
+          <li data-n="4" tabindex="0"><span class="xn">4</span><div><b>Front iPhone mount</b><p>Puts the iPhone Pro&#x27;s camera and LiDAR at the nose, facing the direction of travel with nothing in the way.</p></div></li>
+        </ol>
+      </div>
+      <div class="xsec-panel" role="tabpanel" id="xp-side" aria-labelledby="xt-side" hidden>
+        <figure class="xsec-fig">
+          <img src="assets/images/mt-section-side.jpg" width="1361" height="1035" alt="Side section through the chassis centerline" loading="lazy">
+          <svg viewBox="0 0 1361 1035" aria-hidden="true">
+            <defs><marker id="ah-side" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#fff"/></marker></defs>
+            <g class="co" data-n="1">
+              <line x1="402" y1="398" x2="230" y2="510" class="co-shadow" stroke-width="9.9"/>
+              <line x1="402" y1="398" x2="230" y2="510" class="co-line" stroke-width="3.8" marker-end="url(#ah-side)"/>
+              <circle cx="215" cy="520" r="13" class="co-ring" stroke-width="3.8"/>
+              <circle cx="430" cy="380" r="33" class="co-badge" stroke-width="3.8"/>
+              <text x="430" y="380" font-size="38">1</text>
+            </g>
+            <g class="co" data-n="2">
+              <line x1="133" y1="950" x2="193" y2="817" class="co-shadow" stroke-width="9.9"/>
+              <line x1="133" y1="950" x2="193" y2="817" class="co-line" stroke-width="3.8" marker-end="url(#ah-side)"/>
+              <circle cx="200" cy="800" r="13" class="co-ring" stroke-width="3.8"/>
+              <circle cx="120" cy="980" r="33" class="co-badge" stroke-width="3.8"/>
+              <text x="120" y="980" font-size="38">2</text>
+            </g>
+            <g class="co" data-n="3">
+              <line x1="700" y1="957" x2="700" y2="888" class="co-shadow" stroke-width="9.9"/>
+              <line x1="700" y1="957" x2="700" y2="888" class="co-line" stroke-width="3.8" marker-end="url(#ah-side)"/>
+              <circle cx="700" cy="870" r="13" class="co-ring" stroke-width="3.8"/>
+              <circle cx="700" cy="990" r="33" class="co-badge" stroke-width="3.8"/>
+              <text x="700" y="990" font-size="38">3</text>
+            </g>
+            <g class="co" data-n="4">
+              <line x1="412" y1="592" x2="374" y2="750" class="co-shadow" stroke-width="9.9"/>
+              <line x1="412" y1="592" x2="374" y2="750" class="co-line" stroke-width="3.8" marker-end="url(#ah-side)"/>
+              <circle cx="370" cy="768" r="13" class="co-ring" stroke-width="3.8"/>
+              <circle cx="420" cy="560" r="33" class="co-badge" stroke-width="3.8"/>
+              <text x="420" y="560" font-size="38">4</text>
+            </g>
+          </svg>
+        </figure>
+        <ol class="xsec-list">
+          <li data-n="1" tabindex="0"><span class="xn">1</span><div><b>Hollow mast</b><p>The LiDAR cable runs inside the mast instead of along it. The cone at the top spreads the sensor&#x27;s load into the column.</p></div></li>
+          <li data-n="2" tabindex="0"><span class="xn">2</span><div><b>Flanged mast foot</b><p>A wide flange keyed into the frame takes the bending load from a tall, top-heavy sensor.</p></div></li>
+          <li data-n="3" tabindex="0"><span class="xn">3</span><div><b>Battery low and centered</b><p>The heaviest part sits at the lowest point, between the axles. That gives a low center of gravity and even load on all four mecanum wheels.</p></div></li>
+          <li data-n="4" tabindex="0"><span class="xn">4</span><div><b>Drivers over the motors</b><p>Each driver board sits directly above its motor pod, keeping the high-current motor leads short.</p></div></li>
+        </ol>
+      </div>
+      <div class="xsec-panel" role="tabpanel" id="xp-plan" aria-labelledby="xt-plan" hidden>
+        <figure class="xsec-fig">
+          <img src="assets/images/mt-section-plan.jpg" width="1600" height="1009" alt="Plan section through the base frame" loading="lazy">
+          <svg viewBox="0 0 1600 1009" aria-hidden="true">
+            <defs><marker id="ah-plan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#fff"/></marker></defs>
+            <g class="co" data-n="1">
+              <line x1="310" y1="131" x2="715" y2="252" class="co-shadow" stroke-width="11.7"/>
+              <line x1="310" y1="131" x2="715" y2="252" class="co-line" stroke-width="4.5" marker-end="url(#ah-plan)"/>
+              <circle cx="735" cy="258" r="14" class="co-ring" stroke-width="4.5"/>
+              <circle cx="274" cy="120" r="38" class="co-badge" stroke-width="4.5"/>
+              <text x="274" y="120" font-size="44">1</text>
+            </g>
+            <g class="co" data-n="2">
+              <line x1="982" y1="140" x2="781" y2="394" class="co-shadow" stroke-width="11.7"/>
+              <line x1="982" y1="140" x2="781" y2="394" class="co-line" stroke-width="4.5" marker-end="url(#ah-plan)"/>
+              <circle cx="768" cy="410" r="14" class="co-ring" stroke-width="4.5"/>
+              <circle cx="1006" cy="110" r="38" class="co-badge" stroke-width="4.5"/>
+              <text x="1006" y="110" font-size="44">2</text>
+            </g>
+            <g class="co" data-n="3">
+              <line x1="152" y1="741" x2="394" y2="605" class="co-shadow" stroke-width="11.7"/>
+              <line x1="152" y1="741" x2="394" y2="605" class="co-line" stroke-width="4.5" marker-end="url(#ah-plan)"/>
+              <circle cx="412" cy="595" r="14" class="co-ring" stroke-width="4.5"/>
+              <circle cx="119" cy="760" r="38" class="co-badge" stroke-width="4.5"/>
+              <text x="119" y="760" font-size="44">3</text>
+            </g>
+          </svg>
+        </figure>
+        <ol class="xsec-list">
+          <li data-n="1" tabindex="0"><span class="xn">1</span><div><b>Clamped motors</b><p>Each motor has its own corner bay and a two-screw clamp, so one can be swapped without stripping down the chassis.</p></div></li>
+          <li data-n="2" tabindex="0"><span class="xn">2</span><div><b>Triangulated battery bay</b><p>X-bracing around the battery stiffens the center with very little plastic, because triangles don&#x27;t rack.</p></div></li>
+          <li data-n="3" tabindex="0"><span class="xn">3</span><div><b>Box-section side rails</b><p>Closed, hollow rails resist twisting much better than flat walls of the same weight, which keeps all four wheels planted.</p></div></li>
+        </ol>
+      </div>
+      <div class="xsec-panel" role="tabpanel" id="xp-deck" aria-labelledby="xt-deck" hidden>
+        <figure class="xsec-fig">
+          <img src="assets/images/mt-section-deck.jpg" width="1600" height="993" alt="Cut through the top deck and side rail" loading="lazy">
+          <svg viewBox="0 0 1600 993" aria-hidden="true">
+            <defs><marker id="ah-deck" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#fff"/></marker></defs>
+            <g class="co" data-n="1">
+              <line x1="604" y1="134" x2="780" y2="279" class="co-shadow" stroke-width="11.7"/>
+              <line x1="604" y1="134" x2="780" y2="279" class="co-line" stroke-width="4.5" marker-end="url(#ah-deck)"/>
+              <circle cx="796" cy="292" r="14" class="co-ring" stroke-width="4.5"/>
+              <circle cx="575" cy="110" r="38" class="co-badge" stroke-width="4.5"/>
+              <text x="575" y="110" font-size="44">1</text>
+            </g>
+            <g class="co" data-n="2">
+              <line x1="1246" y1="308" x2="1073" y2="346" class="co-shadow" stroke-width="11.7"/>
+              <line x1="1246" y1="308" x2="1073" y2="346" class="co-line" stroke-width="4.5" marker-end="url(#ah-deck)"/>
+              <circle cx="1053" cy="350" r="14" class="co-ring" stroke-width="4.5"/>
+              <circle cx="1283" cy="300" r="38" class="co-badge" stroke-width="4.5"/>
+              <text x="1283" y="300" font-size="44">2</text>
+            </g>
+            <g class="co" data-n="3">
+              <line x1="1370" y1="876" x2="998" y2="579" class="co-shadow" stroke-width="11.7"/>
+              <line x1="1370" y1="876" x2="998" y2="579" class="co-line" stroke-width="4.5" marker-end="url(#ah-deck)"/>
+              <circle cx="982" cy="566" r="14" class="co-ring" stroke-width="4.5"/>
+              <circle cx="1400" cy="900" r="38" class="co-badge" stroke-width="4.5"/>
+              <text x="1400" y="900" font-size="44">3</text>
+            </g>
+          </svg>
+        </figure>
+        <ol class="xsec-list">
+          <li data-n="1" tabindex="0"><span class="xn">1</span><div><b>Isogrid deck</b><p>Triangular pockets cut weight and print time while keeping the deck stiff in every direction.</p></div></li>
+          <li data-n="2" tabindex="0"><span class="xn">2</span><div><b>T-section ribs</b><p>The cut shows that every rib is a T: the flange forms the surface and the web adds depth. That gives plate-like stiffness without a solid plate.</p></div></li>
+          <li data-n="3" tabindex="0"><span class="xn">3</span><div><b>Ribbed rail walls</b><p>Vertical ribs and diagonal webs brace the long rail walls against buckling and flex.</p></div></li>
+        </ol>
+      </div>
+    </div>
+
     <h3 class="evo-title reveal">Chassis evolution</h3>
     <div class="evo">
       <div class="evo-card reveal">
