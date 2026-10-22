@@ -34,7 +34,7 @@
     <div class="tags" style="margin-bottom:40px">
       <span class="tag">ros 2</span><span class="tag">active slam</span><span class="tag">semantic slam</span>
       <span class="tag">predictive perception</span><span class="tag">mpc</span><span class="tag">regenerative braking</span>
-      <span class="tag">mecanum</span><span class="tag">fusion 360</span><span class="tag">teensy 4.1</span>
+      <span class="tag">mecanum</span><span class="tag">fusion 360</span><span class="tag">teensy 4.1</span><span class="tag">kicad</span>
     </div>
     <div class="dhero reveal">
       <img src="assets/images/mini-tesla-robot.jpg" alt="Mini Tesla mecanum-wheel robot with Velodyne LiDAR">
@@ -311,6 +311,48 @@
   </div>
 </section>
 
+<!-- ELECTRONICS -->
+<section class="mt-section">
+  <div class="wrap">
+    <p class="eyebrow reveal">Electronics · In Progress</p>
+    <h2 class="mt-h reveal">Wiring it up.</h2>
+    <p class="mt-sub reveal">With the mechanical design done, I've started on the electronics. Two dual-channel Cytron MDD10A motor drivers run the four motors, controlled by a Teensy 4.1.</p>
+
+    <div class="elec">
+      <div class="elec-text reveal">
+        <div class="goal-num">01 · Custom symbol</div>
+        <h3>No symbol existed, so I made one.</h3>
+        <p>KiCad has no symbol for the MDD10A, so I built one in my own <strong>Mini_Tesla_Components</strong> library. It was my first symbol, so I learned the Symbol Editor step by step with ChatGPT open beside KiCad, checking each pin against a screenshot before moving on.</p>
+        <p>Control pins (GND, PWM1/2, DIR1/2) sit on the left; motor power (VM+, VM−) and outputs (M1A/B, M2A/B) on the right.</p>
+      </div>
+      <figure class="cad-fig reveal">
+        <a href="assets/images/mt-kicad-symbol.jpg" target="_blank" rel="noopener" title="Open full size"><img src="assets/images/mt-kicad-symbol.jpg" width="1600" height="600" alt="KiCad Symbol Editor building the Cytron MDD10A symbol, with ChatGPT open alongside" loading="lazy"></a>
+        <figcaption><b>Symbol Editor + ChatGPT</b> — placing the five control pins of the Cytron_MDD10A symbol.</figcaption>
+      </figure>
+    </div>
+
+    <div class="elec flip">
+      <div class="elec-text reveal">
+        <div class="goal-num">02 · Drivers to Teensy</div>
+        <h3>Both drivers wired to the Teensy 4.1.</h3>
+        <p>Each driver channel takes a <strong>PWM</strong> signal for speed and a <strong>DIR</strong> signal for direction. PWM runs on Teensy pins 2–5, direction on 6–9, and all grounds are tied together.</p>
+        <table class="pinmap">
+          <thead><tr><th>Driver</th><th>PWM1</th><th>DIR1</th><th>PWM2</th><th>DIR2</th></tr></thead>
+          <tbody>
+            <tr><td>MD1</td><td>2</td><td>6</td><td>3</td><td>7</td></tr>
+            <tr><td>MD2</td><td>4</td><td>8</td><td>5</td><td>9</td></tr>
+          </tbody>
+        </table>
+        <p class="elec-next">Next: battery power to VM+/VM− and the motor outputs.</p>
+      </div>
+      <figure class="cad-fig light reveal">
+        <a href="assets/images/mt-kicad-schematic.jpg" target="_blank" rel="noopener" title="Open full size"><img src="assets/images/mt-kicad-schematic.jpg" width="1600" height="1368" alt="KiCad schematic of two Cytron MDD10A drivers wired to a Teensy 4.1" loading="lazy"></a>
+        <figcaption><b>MiniTesla_EE schematic</b> — MD1 and MD2 wired to U1 (Teensy 4.1).</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- CURRENT DEVELOPMENT -->
 <section class="mt-section">
   <div class="wrap">
@@ -324,6 +366,8 @@
         <ul>
           <li>Mechanical CAD design</li>
           <li>Primary drivetrain architecture</li>
+          <li>Custom KiCad symbol for the MDD10A</li>
+          <li>Driver-to-Teensy control schematic</li>
         </ul>
       </div>
       <div class="status-col doing reveal">
