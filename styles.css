@@ -108,10 +108,10 @@ section{padding:90px 0}
   display:grid;grid-template-columns:1.02fr 1fr;gap:70px;align-items:start;
 }
 .hero h1{
-  /* Capped at 4.1rem so the four-item headline plus the CTAs still clear
-     the fold on a 1440x900 laptop. */
-  font-size:clamp(2.7rem,5.2vw,4.1rem);
-  font-weight:700;line-height:1.06;letter-spacing:-.03em;
+  /* Sized for the two-sentence headline: about 6 lines on a 1440x900
+     laptop so the sub-copy and CTAs still clear the fold. */
+  font-size:clamp(2rem,3.3vw,3.05rem);
+  font-weight:700;line-height:1.1;letter-spacing:-.03em;
   margin-bottom:34px;
 }
 .hero h1 em{font-style:italic;font-weight:450;color:var(--gray2)}
