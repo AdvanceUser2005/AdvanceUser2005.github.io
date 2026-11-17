@@ -42,3 +42,23 @@ document.querySelectorAll('[data-xsec]').forEach(root=>{
     });
   });
 });
+
+// Dark mode toggle
+(()=>{
+  const root=document.documentElement;
+  const btns=document.querySelectorAll('.theme-toggle');
+  const sync=()=>{
+    const dark=root.getAttribute('data-theme')==='dark';
+    btns.forEach(b=>{
+      b.setAttribute('aria-pressed',dark);
+      b.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');
+    });
+  };
+  btns.forEach(b=>b.addEventListener('click',()=>{
+    const next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next)}catch(e){}
+    sync();
+  }));
+  sync();
+})();
