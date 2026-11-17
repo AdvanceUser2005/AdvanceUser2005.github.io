@@ -62,3 +62,13 @@ document.querySelectorAll('[data-xsec]').forEach(root=>{
   }));
   sync();
 })();
+
+// Demo clips: play while on screen, pause when scrolled away
+(()=>{
+  const vids=document.querySelectorAll('video[data-autoplay]');
+  if(!vids.length||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const vo=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting) e.target.play().catch(()=>{}); else e.target.pause();
+  }),{threshold:.5});
+  vids.forEach(v=>vo.observe(v));
+})();

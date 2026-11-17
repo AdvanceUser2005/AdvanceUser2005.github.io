@@ -35,7 +35,7 @@
     <div class="biggest wide"><small>Why this one matters</small><b>My most research-intensive and biggest project ever.</b></div>
     <p class="eyebrow">Personal Project · April 2026 – Present</p>
     <h1>Mini Tesla — autonomous EV &amp; intelligent robotics platform.</h1>
-    <p class="dmeta"><span class="pbadge" style="margin:0 12px 0 0">In Progress</span> Demo · Coming Soon</p>
+    <p class="dmeta"><span class="pbadge" style="margin:0 12px 0 0">In Progress</span> <a class="demo-link" href="#demo">Watch the first drives ↓</a></p>
     <div class="tags" style="margin-bottom:40px">
       <span class="tag">ros 2</span><span class="tag">active slam</span><span class="tag">semantic slam</span>
       <span class="tag">predictive perception</span><span class="tag">mpc</span><span class="tag">regenerative braking</span>
@@ -51,6 +51,33 @@
         The objective: a robot that doesn't just navigate its environment, but <em>actively reasons about what it sees, predicts what happens next, and adapts its behavior in real time.</em>
         <small>Mini Tesla · the goal</small>
       </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO -->
+<section class="mt-section" id="demo">
+  <div class="wrap">
+    <div class="drive">
+      <div class="drive-text reveal">
+        <p class="eyebrow">Demo · First Drives</p>
+        <h2 class="mt-h">It drives.</h2>
+        <p>Before any autonomy, the robot has to move reliably on its own power. These are the first drives of the printed chassis: all four mecanum wheels running, steered by hand with a game controller.</p>
+        <p>Manual driving comes first on purpose. It proves the whole chain, <strong>battery to motor drivers to Teensy to wheels</strong>, before the autonomy stack is trusted with it.</p>
+        <ul class="drive-facts">
+          <li><b>Untethered</b> Runs on its own battery, laptop on the deck</li>
+          <li><b>Hand-driven</b> Game controller, no autonomy yet</li>
+          <li><b>Next</b> Closed-loop motor control with the encoders</li>
+        </ul>
+      </div>
+      <figure class="drive-clip reveal">
+        <video src="assets/video/mini-tesla-drive-indoor.mp4" poster="assets/images/mini-tesla-drive-indoor-poster.jpg" controls muted loop playsinline preload="metadata" data-autoplay></video>
+        <figcaption><b>01 · Indoor shakedown</b> A first low-speed run on a hard floor, to check the drivetrain and wiring before taking it outside.</figcaption>
+      </figure>
+      <figure class="drive-clip reveal">
+        <video src="assets/video/mini-tesla-drive-outdoor.mp4" poster="assets/images/mini-tesla-drive-outdoor-poster.jpg" controls muted loop playsinline preload="metadata" data-autoplay></video>
+        <figcaption><b>02 · Sidewalk run</b> Out on real concrete at night: rougher ground, a longer distance, and seams to cross.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -374,6 +401,7 @@
           <li>Drivetrain assembly</li>
           <li>Teensy 4.1 integration</li>
           <li>Motor-driver wiring</li>
+          <li>First manual drives, indoors and outdoors</li>
           <li>MDD10A KiCad symbol (learned with AI)</li>
           <li>Driver-to-Teensy control schematic</li>
         </ul>

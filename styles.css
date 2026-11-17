@@ -737,3 +737,37 @@ footer b{color:var(--gray);font-weight:600}
 [data-theme="dark"] .xsec-tab:hover{border-color:#55534E}
 [data-theme="dark"] .status-col.done{--c:#5DB38C}
 [data-theme="dark"] .edu-card .vt{background:#fff;border-radius:8px;padding:6px 10px;height:46px}
+
+/* ── MINI TESLA: FIRST-DRIVE DEMOS ───────────────── */
+.demo-link{color:var(--maroon-fg);font-weight:600;text-decoration:none;border-bottom:1px solid currentColor}
+.demo-link:hover{opacity:.75}
+#demo{scroll-margin-top:90px}
+.drive{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:34px;align-items:start}
+.drive-text .eyebrow{margin-bottom:14px}
+.drive-text p:not(.eyebrow){font-size:1.1rem;color:var(--gray);line-height:1.8;margin-bottom:18px}
+.drive-text p strong{color:var(--ink);font-weight:600}
+.drive-facts{list-style:none;margin-top:28px;border-top:1px solid var(--line)}
+.drive-facts li{padding:14px 0;border-bottom:1px solid var(--line);color:var(--gray);font-size:.98rem;line-height:1.5}
+.drive-facts b{
+  display:block;font-size:.68rem;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--maroon-fg);margin-bottom:3px;
+}
+.drive-clip{
+  margin:0;border-radius:var(--radius-lg);overflow:hidden;
+  background:var(--card);box-shadow:var(--shadow);
+}
+.drive-clip video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#111}
+.drive-clip figcaption{padding:16px 20px 20px;font-size:.92rem;color:var(--gray);line-height:1.6}
+.drive-clip figcaption b{
+  display:block;font-size:.72rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink);margin-bottom:6px;
+}
+@media(max-width:1000px){
+  .drive{grid-template-columns:1fr 1fr;gap:22px}
+  .drive-text{grid-column:1/-1}
+}
+@media(max-width:560px){
+  .drive{gap:14px}
+  .drive-clip{border-radius:var(--radius-md)}
+  .drive-clip figcaption{padding:12px 14px 16px;font-size:.84rem}
+}
